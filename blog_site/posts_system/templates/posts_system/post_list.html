@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block post_list %}
+
+{% if post_list %}
+
+    <ul>
+        {% for post in post_list %}
+        <li>
+            <h3> <a href="" class="title">{{ post.title }}</a> </h3>
+            <a href="" class="user">{{ post.user }}</a>
+            <a href="" class="topic"> {{ post.topic }} </a>
+            <p class="content">{{ post.content }}</p>
+            <p class="change-date">Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
+            <p>Votes: {{ post.votes }} </p>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endif %}
+
+{% endblock %}
