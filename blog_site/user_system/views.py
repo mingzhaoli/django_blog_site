@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 
-from user_system.forms import SignUpForm
+from user_system.forms import SignUpForm, LoginForm
 
-from .models import User
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -11,7 +11,14 @@ def user_profile_view(request, user_id):
     return render(request, 'user_system/user_profile.html', {'user': user})
 
 def user_login_view(request):
-    return render(request, 'user_system/user_login.html', {})
+    form = LoginForm(request.POST or None)
+    if form.is_valid():
+        print ("Logged In")
+    
+    context = {
+        'form': form
+    }
+    return render(request, 'user_system/user_login.html', context)
 
 def user_creation_view(request):
     form = SignUpForm(request.POST or None)

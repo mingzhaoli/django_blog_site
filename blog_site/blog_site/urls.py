@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from posts_system.views import post_list_view, post_detail_view, post_creation_view
-from user_system.views import user_creation_view
+from user_system.views import user_creation_view, user_login_view
 
 urlpatterns = [
     #Posts System URLS
@@ -27,6 +27,7 @@ urlpatterns = [
     
     #User System URLS
     path('signup/', user_creation_view, name='user_signup'),
+    path('login/', user_login_view, name='user_login'),
 
     #Admin System URLS
     path('admin/', admin.site.urls),
