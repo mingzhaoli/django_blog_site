@@ -16,13 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from posts_system.views import post_list_view, post_detail_view
+from posts_system.views import post_list_view, post_detail_view, post_creation_view
+from user_system.views import user_creation_view
 
 urlpatterns = [
     #Posts System URLS
     path('', post_list_view,name='blog_list'),
     path('<int:post_id>/', post_detail_view, name='blog_detail'),
+    path('create_post/', post_creation_view, name='blog_create'),
+    
     #User System URLS
+    path('signup/', user_creation_view, name='user_signup'),
 
     #Admin System URLS
     path('admin/', admin.site.urls),
