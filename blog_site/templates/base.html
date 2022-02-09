@@ -3,42 +3,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mint Tea Time</title>
+    <title>{% block title %} Mint's Tea Time {% endblock %}</title>
 </head>
 <body>
     
     {% include 'navbar.html' %}
 
-    {% block post_list %}
-    List of user generated posts here
-    {% endblock %}
-
-    {% block post_detail %}
-    Details of user generated posts here
-    {% endblock %}
-
-    {% block post_creation %}
-    Users can create posts on this form page.
-    {% endblock %}
-
-    {% block post_deletion %}
-    Users can delete posts on this form page
-    {% endblock %}
-
-    {% block user_creation %}
-    Users can create accounts on this page
-    {% endblock %}
-
-    {% block user_deletion %}
-    Users can delete their accounts on this page
-    {% endblock %}
-
-    {% block user_profile %}
-    Users can view user profiles on this page
-    {% endblock %}
-
-    {% block user_login %}
-    Users can log in on this page
+    {% block content %}
+    Block content
     {% endblock %}
 
     {% include 'contact.html' %}

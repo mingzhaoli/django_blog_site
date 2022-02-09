@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 
-{% block post_list %}
+{% block content %}
 
 {% if post_list %}
 
     <ul>
         {% for post in post_list %}
         <li>
-            <h3> <a href="{{ post.id }}/" class="title">{{ post.title }}</a> </h3>
+            <h3> <a href="{% url 'blog_post:blog_detail' post.id %}" class="title">{{ post.title }}</a> </h3>
             <a href="" class="user">{{ post.user.username }}</a>
             <a href="" class="topic"> {{ post.topic }} </a>
             <p class="content">{{ post.content }}</p>
             <p class="change-date">Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
             <p>Votes: {{ post.votes }} </p>
+            <button class="upvote" type="button">
+                Monkey enjoys this.
+            </button>
         </li>
         {% endfor %}
     </ul>

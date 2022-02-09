@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block post_detail %}
+{% block content %}
 
     <div class="post_card">
         <h1> {{ post.title }} </h1>
         <p> {{ post.content }} </p>
-        <a href="user"> {{ post.user.username }} </a>
+        <a href=""> {{ post.user.username }} </a>
         <p> Date Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
     </div>
     <div class="comment_section">
