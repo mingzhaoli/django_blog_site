@@ -1,0 +1,7 @@
+/* Post List Css */
+.blog_list ul{
+    list-style-type: none;
+}
+.blog_list a{
+    text-decoration: none;
+}

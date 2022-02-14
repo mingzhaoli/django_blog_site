@@ -1,0 +1,18 @@
+/* Navigation Bar CSS */
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar li{
+    float: left;
+}
+.navbar a{
+    text-decoration: none;
+    color: #210124;
+    padding: 8px;
+    background-color: #B3DEC1;
+}
+.navbar nav{
+    display: inline-flex;
+}

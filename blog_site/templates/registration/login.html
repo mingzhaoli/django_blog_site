@@ -2,11 +2,18 @@
 
 {% block title %}Log In{% endblock %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog_site/style.css' %}" type="text/css">
+
 {% block content %}
-<h2>Log In</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log In</button>
-</form>
+<div class="login">
+
+    <h2>Log In</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log In</button>
+    </form>
+
+</div>
 {% endblock %}
