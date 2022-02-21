@@ -1,11 +1,5 @@
-/* Base css */
-body{
-    margin: 0;
-}
-
 /* Navigation Bar CSS */
 .navbar ul{
-    height: 50px;
     list-style-type: none;
     margin: 0;
     padding: 0;
