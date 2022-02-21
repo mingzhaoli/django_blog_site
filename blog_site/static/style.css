@@ -1,18 +1,28 @@
+/* Base css */
+body{
+    margin: 0;
+}
+
 /* Navigation Bar CSS */
 .navbar ul{
+    height: 50px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #B3DEC1;
 }
 .navbar li{
     float: left;
 }
 .navbar a{
+    display: block;
     text-decoration: none;
+    text-align: center;
     color: #210124;
-    padding: 8px;
-    background-color: #B3DEC1;
+    padding: 16px;
 }
-.navbar nav{
-    display: inline-flex;
+
+.navbar a:hover{
+    background-color: #388050;
 }

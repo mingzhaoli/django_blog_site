@@ -1,7 +1,18 @@
 /* Post List Css */
-.blog_list ul{
+.blog_card {
+    padding: 10px;
+    border: solid green;
+}
+
+.blog_card ul{
     list-style-type: none;
 }
-.blog_list a{
+
+.blog_card li{
+    border: double #B3DEC1;
+}
+
+.blog_card a{
     text-decoration: none;
+    text-align: left;
 }
