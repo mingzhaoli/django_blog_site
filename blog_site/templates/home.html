@@ -3,11 +3,19 @@
 {% block title %} Mint's Tea Time {% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-        Hello, {{ user.username }}. Care for tea?
-        <a href="{% url 'logout' %}">I'll pass.</a>
-    {% else %}
-        <p>Please log in to participate.</p>
-        <a href="{% url 'login' %}">Log In</a>
-    {% endif %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" >
+
+    <div class="home">
+
+        {% if user.is_authenticated %}
+            Hello, {{ user.username }}. Care for tea?
+            <a href="{% url 'logout' %}">I'll pass.</a>
+        {% else %}
+            <p>Please log in to participate.</p>
+            <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+
+    </div>
 {% endblock %}

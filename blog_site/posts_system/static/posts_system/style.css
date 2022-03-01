@@ -1,7 +1,4 @@
-/* Post List Css */
-.blog_list {
-    background-color: #E5FCF5;
-}
+/* Post List CSS */
 .blog_card h3{
     font-size: 35;
 }
@@ -11,7 +8,7 @@
 }
 
 .blog_card li{
-    border: solid #B3DEC1;
+    border: solid #255535;
     border-radius: 40px;
     padding: 0px 5px 15px 15px;
     margin: 15px 0 15px 0;
@@ -22,4 +19,43 @@
 .blog_card a{
     text-decoration: none;
     text-align: left;
+}
+
+/* Post Detail CSS */
+.post_detail{
+    margin: 15px 15px 0px 15px;
+}
+
+.post_card{
+    padding: 15px;
+    border: solid #255535;
+    border-radius: 20px;
+}
+
+.post_card h1{
+    color: #210124;
+    border-bottom: solid #255535;
+
+}
+
+.content{
+    margin: 10px 0px 10px 15px;
+}
+
+.post_card br{
+    border-bottom: solid #255535;
+}
+
+.border{
+    margin: 15px 0px 15px 0px;
+    border-top: solid #255535;
+}
+
+.post_card a{
+    padding: 2px;
+    text-decoration: none;
+}
+
+.comment_section{
+    margin: 15px 15px 0px 15px;
 }

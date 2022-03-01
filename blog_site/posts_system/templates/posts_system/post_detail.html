@@ -2,14 +2,23 @@
 
 {% block content %}
 
-    <div class="post_card">
-        <h1> {{ post.title }} </h1>
-        <p> {{ post.content }} </p>
-        <a href=""> {{ post.user.username }} </a>
-        <p> Date Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
-    </div>
-    <div class="comment_section">
-        <p>Comments to be added at some point</p>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'posts_system/style.css' %}">
+
+    <div class="post_detail">
+        
+        <div class="post_card">
+            <h1> {{ post.title }} </h1>
+            <p class="content"> {{ post.content }} </p>
+            <div class="border"></div>
+            <a href="" class="user">{{ post.user.username }} </a>
+            <p> Date Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
+        </div>
+        
+        <div class="comment_section">
+            <p>Comments to be added at some point</p>
+        </div>
+
     </div>
 
 {% endblock %}
