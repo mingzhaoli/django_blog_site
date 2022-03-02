@@ -10,7 +10,9 @@
     <div class="home">
 
         {% if user.is_authenticated %}
-            Hello, {{ user.username }}. Care for tea?
+            <h1>Hello, {{ user.username }}.</h1>
+            <h2>Care for some tea?</h2>
+            <a href="{% url 'blog_post:blog_home' %}">I wish to partake.</a>
             <a href="{% url 'logout' %}">I'll pass.</a>
         {% else %}
             <p>Please log in to participate.</p>

@@ -1,24 +1,6 @@
 /* Post List CSS */
-.blog_card h3{
-    font-size: 35;
-}
-
-.blog_card ul{
-    list-style-type: none;
-}
-
-.blog_card li{
-    border: solid #255535;
-    border-radius: 40px;
-    padding: 0px 5px 15px 15px;
-    margin: 15px 0 15px 0;
-    width: 50%;
-    overflow: hidden;
-}
-
-.blog_card a{
-    text-decoration: none;
-    text-align: left;
+.post_list{
+    margin: 0;
 }
 
 /* Post Detail CSS */

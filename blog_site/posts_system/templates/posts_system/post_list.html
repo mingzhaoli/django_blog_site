@@ -6,19 +6,19 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'posts_system/style.css' %}">
 
-<div class="blog_list" style="background-color: #FEFFFE;">
+<div class="post_list">
     
     {% if post_list %}
 
-        <div class="blog_card">
+        <ul style="margin: 10px 5px 10px 5px;">
+            {% for post in post_list %}
 
-            <ul>
-                {% for post in post_list %}
-                <li>
-                    <h3> <a href="{% url 'blog_post:blog_detail' post.id %}" class="title">{{ post.title }}</a> </h3>
-                    <h4>User: </h4><a href="" class="user">{{ post.user.username }}</a>
-                    <br><br>
-                    <h4>Topic: </h4> <a href="" class="topic">{{ post.topic }} </a>
+            <div class="post_card" style=" background-color: #E5FCF5; margin: 0px 5px 10px 5px;">
+
+                <li style="list-style-type: none;">
+                    <h1> <a href="{% url 'blog_post:blog_detail' post.id %}" class="title">{{ post.title }}</a> </h1>
+                    <p>User: <a href="" class="user">{{ post.user.username }}</a> </p>
+                    <p>Topic: <a href="" class="topic">{{ post.topic }} </a></p>
                     <p class="content">{{ post.content }}</p>
                     <p class="change-date">Published: {{ post.pub_date }} | Last Modified: {{ post.last_modified }} </p>
                     <p>Votes: {{ post.votes }} </p>
@@ -26,11 +26,12 @@
                         Monkey enjoys this.
                     </button>
                 </li>
-                {% endfor %}
-            </ul>
+                
+            </div>
 
-        </div>
-    
+            {% endfor %}
+        </ul>
+
     {% endif %}
 
 </div>
