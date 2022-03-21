@@ -7,8 +7,9 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" >
 
-    <div class="home">
-
+<div class="home">
+    <div class="center-message">
+        
         {% if user.is_authenticated %}
             <h1>Hello, {{ user.username }}.</h1>
             <h2>Care for some tea?</h2>
@@ -20,4 +21,6 @@
         {% endif %}
 
     </div>
+</div>
+
 {% endblock %}

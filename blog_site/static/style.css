@@ -1,24 +1,73 @@
-/* Navigation Bar CSS */
-.navbar ul{
-    list-style-type: none;
-    margin: 0;
+/* General CSS */
+* {
     padding: 0;
-    overflow: hidden;
-    background-color: #B3DEC1;
-}
-.navbar li{
-    float: left;
-}
-.navbar a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: #210124;
-    padding: 16px;
+    margin: 0;
 }
 
-.navbar a:hover{
-    background-color: #388050;
+.nav-left {
+    display: flex;
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-center {
+    display: flex;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #21312D;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Navigation Bar CSS */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+
+
+    border-bottom: solid #82ABA1;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+    margin: 5px 10px 5px 10px;
+    padding: 5px;
+}
+
+.navbar li {
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+}
+
+.navbar li:hover {
+    background-color: #B8E1FF;
 }
 
 /* Home CSS */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80%;
+}
+
+.center-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
