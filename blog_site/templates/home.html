@@ -13,11 +13,10 @@
         {% if user.is_authenticated %}
             <h1>Hello, {{ user.username }}.</h1>
             <h2>Care for some tea?</h2>
-            <a href="{% url 'blog_post:blog_home' %}">I wish to partake.</a>
-            <a href="{% url 'logout' %}">I'll pass.</a>
+            <a href="{% url 'blog_post:blog_home' %}">Show my feed.</a>
+            <a href="{% url 'logout' %}">Log out</a>
         {% else %}
-            <p>Please log in to participate.</p>
-            <a href="{% url 'login' %}">Log In</a>
+            <p>Please <a href="{% url 'login' %}" style="text-decoration: dashed; color: #82ABA1;">log in</a> to participate.</p>
         {% endif %}
 
     </div>

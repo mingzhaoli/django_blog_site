@@ -33,7 +33,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 55px;
+    height: 10%;
 
 
     border-bottom: solid #82ABA1;
@@ -49,8 +49,7 @@ li {
 }
 
 .navbar li {
-    margin: 5px 10px 5px 0;
-    padding: 5px;
+    padding: 10px 15px 10px 5px;
 }
 
 .navbar li:hover {
@@ -63,11 +62,21 @@ li {
     align-items: center;
     justify-content: center;
 
-    height: 80%;
+    height: 85%;
 }
 
 .center-message {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Contact CSS */
+.contact-info {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 5%;
+
+    margin: 0 0 0 5px;
 }
